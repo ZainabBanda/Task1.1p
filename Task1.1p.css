@@ -1,0 +1,149 @@
+/* Task1.1p.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+nav {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 20px;
+}
+.nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}
+
+.nav-menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-menu li a:hover {
+    background-color: #111;
+}
+.header-image {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-image: url('/Users/zeebanda/Desktop/SIT 313/Task 1.1P/headerimage.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+}
+.header-image:hover .hover-text {
+    opacity: 1;
+}
+.hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 36px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.profile-section {
+    text-align: center;
+    padding: 20px;
+}
+.profile-section img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Ensures the image covers the circle area */
+}
+.profile-section p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+.projects-section {
+    padding: 20px;
+}
+.project {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    overflow: hidden; /* Ensures no overflow */
+}
+.project img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Ensures the image is cropped nicely */
+    border-radius: 5px;
+}
+.project-info {
+    margin-left: 20px;
+}
+.project-info h3 {
+    margin: 0;
+}
+.project-info p {
+    margin: 5px 0;
+}
+.project-info a {
+    color: #007BFF;
+    text-decoration: none;
+}
+.project-info a:hover {
+    text-decoration: underline;
+}
+.gallery-section {
+    padding: 20px;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover; /* Ensures the images are well-cropped and fill the space */
+}
+
+/* Media Queries for Responsive Layout */
+@media only screen and (max-width: 768px) {
+    .header-image {
+        height: 300px; /* Adjust height for smaller screens */
+    }
+    .profile-section img {
+        width: 120px;
+        height: 120px;
+    }
+    .nav-menu {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .nav-menu li {
+        flex: none;
+    }
+    .nav-menu li a {
+        padding: 10px;
+    }
+    .project {
+        flex-direction: column;
+        text-align: center;
+    }
+    .project img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+}
